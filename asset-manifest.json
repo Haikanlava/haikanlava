@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/haikanlava/static/css/main.afdd1d34.css",
-    "main.js": "/haikanlava/static/js/main.998fcec9.js",
+    "main.css": "/haikanlava/static/css/main.98596800.css",
+    "main.js": "/haikanlava/static/js/main.9eff30bc.js",
     "static/js/787.1db34099.chunk.js": "/haikanlava/static/js/787.1db34099.chunk.js",
     "static/media/lava ulkoa1200.png": "/haikanlava/static/media/lava ulkoa1200.5245be7d7c91f1bfa938.png",
     "static/media/ilmakuva1200.jpg": "/haikanlava/static/media/ilmakuva1200.15e7a6869053d55bd861.jpg",
@@ -20,12 +20,12 @@
     "static/media/kahvila320.jpg": "/haikanlava/static/media/kahvila320.a76f8bc7ce94ffd7b2cb.jpg",
     "static/media/juhlissa320.jpg": "/haikanlava/static/media/juhlissa320.0f1aa6a75e1ae67e7a2e.jpg",
     "index.html": "/haikanlava/index.html",
-    "main.afdd1d34.css.map": "/haikanlava/static/css/main.afdd1d34.css.map",
-    "main.998fcec9.js.map": "/haikanlava/static/js/main.998fcec9.js.map",
+    "main.98596800.css.map": "/haikanlava/static/css/main.98596800.css.map",
+    "main.9eff30bc.js.map": "/haikanlava/static/js/main.9eff30bc.js.map",
     "787.1db34099.chunk.js.map": "/haikanlava/static/js/787.1db34099.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.afdd1d34.css",
-    "static/js/main.998fcec9.js"
+    "static/css/main.98596800.css",
+    "static/js/main.9eff30bc.js"
   ]
 }
