@@ -1,16 +1,31 @@
 {
   "files": {
-    "main.css": "/haikanlava/static/css/main.073c9b0a.css",
-    "main.js": "/haikanlava/static/js/main.5f95b019.js",
+    "main.css": "/haikanlava/static/css/main.afdd1d34.css",
+    "main.js": "/haikanlava/static/js/main.998fcec9.js",
     "static/js/787.1db34099.chunk.js": "/haikanlava/static/js/787.1db34099.chunk.js",
-    "static/media/logo.svg": "/haikanlava/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "static/media/lava ulkoa1200.png": "/haikanlava/static/media/lava ulkoa1200.5245be7d7c91f1bfa938.png",
+    "static/media/ilmakuva1200.jpg": "/haikanlava/static/media/ilmakuva1200.15e7a6869053d55bd861.jpg",
+    "static/media/lava auringossa1200.jpg": "/haikanlava/static/media/lava auringossa1200.0cd2b644340af4f753c3.jpg",
+    "static/media/haat1200.jpg": "/haikanlava/static/media/haat1200.9503508352edda22845a.jpg",
+    "static/media/ilmakuva1200wt.jpg": "/haikanlava/static/media/ilmakuva1200wt.d7aebbced1e5c7ba36af.jpg",
+    "static/media/Lavan pihalla1200.jpg": "/haikanlava/static/media/Lavan pihalla1200.537ffe6bbd02b5a318f6.jpg",
+    "static/media/Lavan pihalla1200w.jpg": "/haikanlava/static/media/Lavan pihalla1200w.ec2c4a496daaa07db6c8.jpg",
+    "static/media/juhlissa1200.jpg": "/haikanlava/static/media/juhlissa1200.e849905382cc3e55a532.jpg",
+    "static/media/kahvila720.jpg": "/haikanlava/static/media/kahvila720.a4944a9267d2b630bdc3.jpg",
+    "static/media/lava ulkoa320.png": "/haikanlava/static/media/lava ulkoa320.252244248d0feaedeeaf.png",
+    "static/media/haat320.jpg": "/haikanlava/static/media/haat320.56fa4a2d12d82c4a9f27.jpg",
+    "static/media/lava auringossa320.jpg": "/haikanlava/static/media/lava auringossa320.2b488a854dbf60fc3a01.jpg",
+    "static/media/ilmakuva320.jpg": "/haikanlava/static/media/ilmakuva320.7834a947cda96eab0bca.jpg",
+    "static/media/Lavan pihalla320.jpg": "/haikanlava/static/media/Lavan pihalla320.17ec45b70f4891e81c7f.jpg",
+    "static/media/kahvila320.jpg": "/haikanlava/static/media/kahvila320.a76f8bc7ce94ffd7b2cb.jpg",
+    "static/media/juhlissa320.jpg": "/haikanlava/static/media/juhlissa320.0f1aa6a75e1ae67e7a2e.jpg",
     "index.html": "/haikanlava/index.html",
-    "main.073c9b0a.css.map": "/haikanlava/static/css/main.073c9b0a.css.map",
-    "main.5f95b019.js.map": "/haikanlava/static/js/main.5f95b019.js.map",
+    "main.afdd1d34.css.map": "/haikanlava/static/css/main.afdd1d34.css.map",
+    "main.998fcec9.js.map": "/haikanlava/static/js/main.998fcec9.js.map",
     "787.1db34099.chunk.js.map": "/haikanlava/static/js/787.1db34099.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.073c9b0a.css",
-    "static/js/main.5f95b019.js"
+    "static/css/main.afdd1d34.css",
+    "static/js/main.998fcec9.js"
   ]
 }
