@@ -1,22 +1,26 @@
 /**
  * Created by jannevainio on 13/01/17.
  */
-import React from 'react';
+import React, {useEffect, useState} from 'react';
+import {fetchGoogleData} from './Utils'
 
+const RenderIntros = ({sheetName, numbering=false, align="left"}) => {
 
-const RenderIntros = props => {
+  const [calData, setCalData] = useState([]);
+
+  useEffect(() => {
+    fetchGoogleData(sheetName, setCalData);
+  }, []);
+
+  const style={
+    textAlign: align
+  };
+
   return (
     <div>
-      {props.intro.map(function (paragraph, j, intro) {
-
-        var pStyle={};
-
-        if(j>0 && intro[j-1].substring(0, 5) == "STYLE")
-          pStyle = JSON.parse(intro[j-1].substring(6));
-
-        if(paragraph.substring(0, 5) != "STYLE")
-          return <p style={pStyle} key={j}   dangerouslySetInnerHTML={{__html: paragraph}} ></p>;
-      })}
+      {calData.map((item, i) =>
+        <p style={style} key={i} >{(numbering ? (i+1) + ". " : "")+ item}</p>
+      )}
     </div>
   );
 };

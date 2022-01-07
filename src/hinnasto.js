@@ -1,61 +1,43 @@
 /**
  * Created by jannevainio on 13/01/17.
  */
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import { Link } from 'react-router-dom';
-
 import PlainClosableLayout from './plainclosablelayout';
-import RenderIntros from './renderintros';
 import Jimage from './jimage';
-import { useStore } from './Store';
-
 import contactImg from './img/juhlissa1200.jpg';
+import {fetchGoogleData} from './Utils'
 
 const Hinnasto = () => {
 
-  const { lavaData } = useStore();
+  const [calData, setCalData] = useState([]);
 
-  if(lavaData.length == 0){
-    return(<div></div>)
-  }
+  useEffect(() => {
+    fetchGoogleData("hinnasto", setCalData);
+  }, []);
+
   return (
-    <PlainClosableLayout text={lavaData[0][0]}  >
-
+    <PlainClosableLayout text="Hinnasto"  >
 
       <div className="minWrapper">
+
         <table className="priceTable">
           <tbody>
-          <tr><td className="wholeRow" colSpan={4}>Yksityiset vuokraajat (alv 24%)</td></tr>
-
-          <tr>
-            <th></th><th>hinta</th><th></th><th className="lastCell">Varaus&#173;maksu</th>
-          </tr>
-          <tr>
-            <td className="firstCell">Maanantai-torstai</td><td>{lavaData[2][1]}€</td><td>vrk</td><td>{lavaData[2][2]}€</td>
-
-          </tr>
-          <tr>
-            <td className="firstCell">Perjantai-sunnuntai</td><td>{lavaData[3][1]}€</td><td>vrk</td><td>{lavaData[3][2]}€</td>
-          </tr>
-          <tr>
-            <td className="firstCell">Viikonloppu&#173;paketti <br/> (pe klo 12 - su klo 12)</td><td>{lavaData[4][1]}€</td><td>2 vrk</td><td>{lavaData[4][2]}€</td>
-          </tr>
-
-          <tr><td className="wholeRow" colSpan={4}>Yritykset (alv 0%)</td></tr>
-
-          <tr>
-            <th></th><th>hinta</th><th></th><th className="lastCell">Varaus&#173;maksu</th>
-          </tr>
-          <tr>
-            <td className="firstCell">Maanantai-torstai</td><td>{lavaData[6][1]}€</td><td>vrk</td><td>{lavaData[6][2]}€</td>
-
-          </tr>
-          <tr>
-            <td className="firstCell">Perjantai-sunnuntai</td><td>{lavaData[7][1]}€</td><td>vrk</td><td>{lavaData[7][2]}€</td>
-          </tr>
-          <tr>
-            <td className="firstCell">Viikonloppu&#173;paketti <br/> (pe klo 12 - su klo 12)</td><td>{lavaData[8][1]}€</td><td>2 vrk</td><td>{lavaData[8][2]}€</td>
-          </tr>
+          {calData.map((row, i) => {
+            return(
+              <tr key={i}>
+                {row.map((cell, j) => {
+                return <td
+                  key={j}
+                  className={row.length===1 ? "wholeRow" : null}
+                  colSpan={4 / row.length} key={j} >
+                  <span style={{fontWeight:row.length===2 ? "bold" : "Normal" }}>{cell}</span>
+                </td>
+              })}
+                </tr>
+            )
+          }
+          )}
 
           <tr><td className="wholeRow white" colSpan={4}>
             <br/>
@@ -72,10 +54,7 @@ const Hinnasto = () => {
           </tbody>
         </table>
 
-
       </div>
-
-
     </PlainClosableLayout>
   );
 };

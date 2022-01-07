@@ -21,7 +21,7 @@ const Home = () => {
 
   return (
     <div>
-  <Header title={siteData.siteTitle}/>
+  <Header/>
 
   <TransitionGroup
       appear={true}
@@ -37,7 +37,7 @@ const Home = () => {
        <div className="mainStyle" >
 
          <div className="polaroids">
-           <Link to="/esittely" ><Polaroid text="Tutustu meihin" headerProp={presentationImg}/></Link>
+           <Link to="/esittely" ><Polaroid text="Esittely" headerProp={presentationImg}/></Link>
            <Link to="/yhteystiedot" ><Polaroid text="Sijainti" headerProp={contactImg}/></Link>
            <Link to="/varauskalenteri" ><Polaroid text="Katso varaustilanne" headerProp={calendarImg} data={siteData.varauskalenteri}/></Link>
            <Link to="/kuvagalleria" ><Polaroid text="Kuvia" headerProp={galleryImg}/></Link>

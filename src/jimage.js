@@ -37,4 +37,4 @@ class Jimage extends React.Component {
 
 };
 
-export default Jimage // Enhanced component
+export default Jimage

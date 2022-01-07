@@ -14,7 +14,7 @@ $mobile-wrapper-width: 600px;
 //$baseColor: #EE7942;
 //$baseColor: #95846a;
 
-$whiteColor: #f9f9ff;
+$whiteColor: #f9f8f9;
 $baseColor: #2F496E;
 $backgroundColor: #F4EADE;
 $backgroundColor: #F4EADE;
@@ -97,6 +97,9 @@ $primaryColor: #896e69;
     background-color: lighten($emphasizeColor, 15%);
   }
   tr:nth-child(8){
+    background-color: lighten($emphasizeColor, 15%);
+  }
+  tr:nth-child(10){
     background-color: lighten($emphasizeColor, 15%);
   }
   td{
@@ -727,6 +730,7 @@ $primaryColor: #896e69;
       padding-top:3px;
       color: $primaryColor;
       font-size: 23px;
+      font-weight: 500;
       line-height: 52px;
       vertical-align: middle;
       letter-spacing: 0.06em;

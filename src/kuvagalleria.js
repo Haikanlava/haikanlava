@@ -2,7 +2,6 @@
  * Created by jannevainio on 13/01/17.
  */
 import React from 'react';
-import siteData from './data';
 import GalleryClosableLayout from './galleryclosablelayout';
 import ImageGallery from 'react-image-gallery';
 import "../node_modules/react-image-gallery/styles/scss/image-gallery.scss";
@@ -31,6 +30,26 @@ import img7 from './img/lava ulkoa1200.png';
 import img7t from './img/lava ulkoa320.png';
 
 const Kuvagalleria = () => {
+
+  const [images2, setImages2] = React.useState(null)
+  React.useEffect(() => {
+    let shouldCancel = false
+    const call = async () => {
+      const response = await fetch(
+        'https://photos.google.com/share/AF1QipP0qHWGkR6KvJNAa7DGds7gQkEaa8clL1P1hJJuEyQM6VKgZJO2ha99NG_EKwQkuQ?key=NUpyNnVseWlsSTNaTUdLVU1pR0JfR0RlR3hMSV9B?key=AIzaSyABZeUkblAHJB7s8jRlea4jitjuqtff5k0'
+      );
+      if (!shouldCancel && response.data && response.data.length > 0) {
+        setImages2(response.data.map(url => ({
+          original: `${url}=w1024`,
+          thumbnail: `${url}=w100`
+        })))
+      }
+    }
+    call()
+    return () => shouldCancel = true
+  }, [])
+
+  console.log(images2);
   function handleImageLoad (event) {
     // console.log('Image loaded ', event.target)
   }
@@ -65,7 +84,7 @@ const Kuvagalleria = () => {
     }
   ];
   return (
-    <GalleryClosableLayout text={siteData.kuvagalleria.title}>
+    <GalleryClosableLayout text="Kuvagalleria">
       <div className="galleryImgs">
         <ImageGallery
           items={images}

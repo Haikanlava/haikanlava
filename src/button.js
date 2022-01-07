@@ -3,13 +3,7 @@
  */
 import React from 'react';
 
-const Button = props => {
-  return (
-    <div
-      className="btn btn-default"
-      onClick={props.handleClick}>{props.label}
-    </div>
-  );
-};
+const Button = ({handleClick, label}) =>
+  <div className="btn btn-default" onClick={handleClick}>{label}</div>;
 
 export default Button;
