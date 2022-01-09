@@ -5,6 +5,7 @@ import React from 'react';
 import Button from './button';
 import Jimage from './jimage';
 import siteData from './data';
+import { useStore } from './Store';
 
 import { browserRouter } from 'react-router-dom'
 import { withRouter } from 'react-router-dom'
@@ -13,7 +14,15 @@ import {CSSTransition, TransitionGroup} from 'react-transition-group' // ES6
 
 const PlainClosableLayout = props => {
 
+  const data = useStore();
   const nodeRef = React.useRef(null);
+  const pageData = props.name && data[props.name] ? data[props.name] : null;
+
+  const wideImage = pageData && pageData.wideImage1st ? pageData.wideImage1st : props.wideImg;
+  const image1 = pageData && pageData.image1 ? pageData.image1 : props.image1;
+  const image2 = pageData && pageData.image2 ? pageData.image2 : props.image2;
+
+  const onBottom = props.onBottom ? true : false;
 
   function handleClick () {
     props.history.goBack();
@@ -40,16 +49,19 @@ const PlainClosableLayout = props => {
 
         <div className="content">
 
-          {props.wideImg ? (
-            <Jimage className="wideImg" imgSrc={props.wideImg}/>
+          {wideImage && !onBottom ? (
+            <Jimage className="wideImg" imgSrc={wideImage}/>
           ) : null}
           {props.children}
-          {props.image ? (
-            <img className="right" src={props.image}/>
+          {image1 ? (
+            <img className="right" src={image1}/>
           ) : null}
 
-          {props.image2 ? (
-            <img className="left" src={props.image2}/>
+          {image2 ? (
+            <img className="left" src={image2}/>
+          ) : null}
+          {wideImage && onBottom ? (
+            <Jimage maxWidth={props.maxWidth} className="wideImg" imgSrc={wideImage}/>
           ) : null}
         </div>
       </div>

@@ -5,7 +5,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import PlainClosableLayout from './plainclosablelayout';
 import RenderIntros from './renderintros';
-import contactImg from './img/ilmakuva1200wt.jpg';
 
 const Yhteystiedot = (props) => {
 
@@ -59,7 +58,7 @@ const Yhteystiedot = (props) => {
   right.width = rh;
 
   return (
-    <PlainClosableLayout text="Yhteystiedot" wideImg={contactImg}>
+    <PlainClosableLayout name="yhteystiedot" text="Yhteystiedot" >
       <div style={right}>
         <RenderIntros sheetName="yhteystiedot" numbering={false} />
         <Link style={{ display:'block', textAlign: 'center', textDecoration: 'underline', color: '#ffffff' }} to="/varauskalenteri" ><p style={{ margin: '16px auto', textAlign: 'center', color: '#ffffff', background:'#2875C7', padding: '6px',  display: 'inline-block', paddingBottom: '9px', borderRadius: '5px' }}>Katso vapaita aikoja</p></Link>

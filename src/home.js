@@ -9,15 +9,17 @@ import { StoreProvider } from './Store';
 
 import Polaroid from './polaroid';
 import siteData from './data';
-
-import calendarImg from './img/lava auringossa320.jpg';
-import presentationImg from './img/Lavan pihalla320.jpg';
-import galleryImg from './img/haat320.jpg';
-import contactImg from './img/ilmakuva320.jpg';
-import priceImg from './img/juhlissa320.jpg';
+import { useStore } from './Store';
 
 const Home = () => {
+
   const nodeRef = React.useRef(null);
+  const data = useStore();
+  const calendarImg = data && data.varauskalenteri ? data.varauskalenteri.thumbnailImage : null;
+  const galleryImg = data && data.kuvagalleria ? data.kuvagalleria.thumbnailImage : null;
+  const presentationImg = data && data.esittely ? data.esittely.thumbnailImage : null;
+  const contactImg = data && data.yhteystiedot ? data.yhteystiedot.thumbnailImage : null;
+  const priceImg = data && data.hinnasto ? data.hinnasto.thumbnailImage : null;
 
   return (
     <div>
@@ -37,11 +39,11 @@ const Home = () => {
        <div className="mainStyle" >
 
          <div className="polaroids">
-           <Link to="/esittely" ><Polaroid text="Esittely" headerProp={presentationImg}/></Link>
-           <Link to="/yhteystiedot" ><Polaroid text="Sijainti" headerProp={contactImg}/></Link>
-           <Link to="/varauskalenteri" ><Polaroid text="Katso varaustilanne" headerProp={calendarImg} data={siteData.varauskalenteri}/></Link>
-           <Link to="/kuvagalleria" ><Polaroid text="Kuvia" headerProp={galleryImg}/></Link>
-           <Link to="/hinnasto" ><Polaroid text="Hinnasto" headerProp={priceImg}/></Link>
+           <Link to="/esittely" ><Polaroid name="esittely" text="Esittely" headerProp={presentationImg}/></Link>
+           <Link to="/yhteystiedot" ><Polaroid name="yhteystiedot" text="Sijainti" headerProp={contactImg}/></Link>
+           <Link to="/varauskalenteri" ><Polaroid name="varauskalenteri" text="Katso varaustilanne" headerProp={calendarImg} data={siteData.varauskalenteri}/></Link>
+           <Link to="/kuvagalleria" ><Polaroid name="kuvagalleria" text="Kuvia" headerProp={galleryImg}/></Link>
+           <Link to="/hinnasto" ><Polaroid name="hinnasto" text="Hinnasto" headerProp={priceImg}/></Link>
          </div>
        </div>
        </div>

@@ -6,8 +6,8 @@ import logoImg from './img/lavanew1.png';
 import { useStore } from './Store';
 
 const Header = props => {
-  const { lavaData } = useStore();
-  const headerText = lavaData.length == 0 ? "" : lavaData[0][1];
+  const { siteData } = useStore();
+  const headerText = siteData && siteData.length == 0 ? siteData[0][1] : "";
 
   return (
     <div className="header">

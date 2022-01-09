@@ -1,88 +1,49 @@
 /**
  * Created by jannevainio on 13/01/17.
  */
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import GalleryClosableLayout from './galleryclosablelayout';
 import ImageGallery from 'react-image-gallery';
 import "../node_modules/react-image-gallery/styles/scss/image-gallery.scss";
-
-
-import img1 from './img/Lavan pihalla1200.jpg';
-
-import img1t from './img/Lavan pihalla320.jpg';
-
-import img2 from './img/lava auringossa1200.jpg';
-import img2t from './img/lava auringossa320.jpg';
-
-import img3 from './img/ilmakuva1200.jpg';
-import img3t from './img/ilmakuva320.jpg';
-
-import img4 from './img/haat1200.jpg';
-import img4t from './img/haat320.jpg';
-
-import img5 from './img/kahvila720.jpg';
-import img5t from './img/kahvila320.jpg';
-
-import img6 from './img/juhlissa1200.jpg';
-import img6t from './img/juhlissa320.jpg';
-
-import img7 from './img/lava ulkoa1200.png';
-import img7t from './img/lava ulkoa320.png';
+import {fetchGoogleData} from './Utils'
+import { useStore } from './Store';
 
 const Kuvagalleria = () => {
 
-  const [images2, setImages2] = React.useState(null)
-  React.useEffect(() => {
-    let shouldCancel = false
-    const call = async () => {
-      const response = await fetch(
-        'https://photos.google.com/share/AF1QipP0qHWGkR6KvJNAa7DGds7gQkEaa8clL1P1hJJuEyQM6VKgZJO2ha99NG_EKwQkuQ?key=NUpyNnVseWlsSTNaTUdLVU1pR0JfR0RlR3hMSV9B?key=AIzaSyABZeUkblAHJB7s8jRlea4jitjuqtff5k0'
-      );
-      if (!shouldCancel && response.data && response.data.length > 0) {
-        setImages2(response.data.map(url => ({
-          original: `${url}=w1024`,
-          thumbnail: `${url}=w100`
-        })))
-      }
-    }
-    call()
-    return () => shouldCancel = true
-  }, [])
+  const data = useStore();
 
-  console.log(images2);
+  const [calData, setCalData] = useState([]);
+
+  const imageData = data.imageData;
+
+  useEffect(() => {
+    fetchGoogleData("kuvagalleria", setCalData);
+  }, []);
+
+  const images = [];
+
+  if(imageData.length > 0 && calData.length > 0){
+
+    for(let i=0; i <calData.length; i++) {
+      let j = 0;
+      let url, thumbUrl;
+      while (j < imageData.length && (!url || !thumbUrl)) {
+        if (!url && imageData[j][0] === calData[i][0]) {
+          url = imageData[j][5] + "=w" + imageData[j][2] + "-h" + imageData[j][3];
+        }
+        if (!thumbUrl && imageData[j][0] === calData[i][1]) {
+          thumbUrl = imageData[j][5] + "=w" + imageData[j][2] + "-h" + imageData[j][3];
+        }
+        j++;
+      }
+      images.push({original: url, thumbnail: thumbUrl})
+    }
+  }
+
   function handleImageLoad (event) {
     // console.log('Image loaded ', event.target)
   }
-  const images = [
-    {
-      original: img1,
-      thumbnail: img1t
-    },
-    {
-      original: img2,
-      thumbnail: img2t
-    },
-    {
-      original: img3,
-      thumbnail: img3t
-    },
-    {
-      original: img4,
-      thumbnail: img4t
-    },
-    {
-      original: img5,
-      thumbnail: img5t
-    },
-    {
-      original: img6,
-      thumbnail: img6t
-    },
-    {
-      original: img7,
-      thumbnail: img7t
-    }
-  ];
+
   return (
     <GalleryClosableLayout text="Kuvagalleria">
       <div className="galleryImgs">

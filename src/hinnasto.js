@@ -5,7 +5,6 @@ import React, {useEffect, useState} from 'react';
 import { Link } from 'react-router-dom';
 import PlainClosableLayout from './plainclosablelayout';
 import Jimage from './jimage';
-import contactImg from './img/juhlissa1200.jpg';
 import {fetchGoogleData} from './Utils'
 
 const Hinnasto = () => {
@@ -17,7 +16,7 @@ const Hinnasto = () => {
   }, []);
 
   return (
-    <PlainClosableLayout text="Hinnasto"  >
+    <PlainClosableLayout maxWidth={640} name="hinnasto" text="Hinnasto"  onBottom={true} >
 
       <div className="minWrapper">
 
@@ -46,10 +45,6 @@ const Hinnasto = () => {
             </Link>
           </td></tr>
 
-          <tr><td className="wholeRow white" colSpan={4}>
-            <br/>
-            <Jimage className="wideImg" imgSrc={contactImg}/>
-          </td></tr>
 
           </tbody>
         </table>
@@ -59,4 +54,11 @@ const Hinnasto = () => {
   );
 };
 
+/*
+ <tr><td className="wholeRow white" colSpan={4}>
+ <br/>
+ <Jimage className="wideImg" imgSrc={contactImg}/>
+ </td></tr>
+
+ */
 export default Hinnasto;

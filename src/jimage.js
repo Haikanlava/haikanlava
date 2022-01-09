@@ -21,9 +21,15 @@ class Jimage extends React.Component {
       width: '200px',
       position: 'relative',
       overflow: "visible",
-      textAlign: 'center'
+      textAlign: 'center',
+      marginLeft: "auto",
+      marginRight: "auto"
     };
     imageStyle.width = this.props.containerWidth + 'px';
+    if(this.props.maxWidth){
+      imageStyle.width = this.props.maxWidth + 'px';
+
+    }
     return (
       <div>
         <div

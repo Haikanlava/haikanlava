@@ -2,7 +2,6 @@
  * Created by jannevainio on 13/01/17.
  */
 import React from 'react';
-import siteData from './data';
 
 const Polaroid = ({headerProp, text}) =>
   <figure>
