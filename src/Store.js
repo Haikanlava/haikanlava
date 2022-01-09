@@ -45,35 +45,33 @@ export const StoreProvider = ({ children }) => {
 
         let j=0;
         let url, thumbUrl, img1Url, img2Url;
-        let size;
-        let thumbSize;
-        let img1Size;
-        let img2Size;
-        while(j < imageData.length && (!url || !thumbUrl || !img1Url || !img2Url)){
-          if(!url && imageData[j][0] === siteData[i][4]){
-            url=imageData[j][5];
-            size="=w" + imageData[j][2] + "-h" + imageData[j][3]
-          }
 
-          if(!thumbUrl && imageData[j][0] === siteData[i][5]){
-            thumbUrl=imageData[j][5];
-            thumbSize="=w" + imageData[j][2] + "-h" + imageData[j][3];
+        const siteUrl = siteData[i][4];
+        const siteThumbUrl = siteData[i][5];
+        const siteImg1Url = siteData[i][6];
+        const siteImg2Url = siteData[i][7];
+
+        while(j < imageData.length && (!url || !thumbUrl || !img1Url || !img2Url)){
+
+          if(!url && imageData[j][0] === siteUrl){
+            url=imageData[j][5] + "=w" + imageData[j][2] + "-h" + imageData[j][3];
           }
-          if(!img1Url && imageData[j][0] === siteData[i][6]){
-            img1Url=imageData[j][5];
-            img1Size="=w" + imageData[j][2] + "-h" + imageData[j][3];
+          else if(!thumbUrl && imageData[j][0] === siteThumbUrl){
+            thumbUrl=imageData[j][5] + "=w" + imageData[j][2] + "-h" + imageData[j][3];
           }
-          if(!img2Url && imageData[j][0] === siteData[i][7]){
-            img2Url=imageData[j][5];
-            img2Size="=w" + imageData[j][2] + "-h" + imageData[j][3];
+          else if(!img1Url && imageData[j][0] === siteImg1Url){
+            img1Url=imageData[j][5] + "=w" + imageData[j][2] + "-h" + imageData[j][3];
+          }
+          else if(!img2Url && imageData[j][0] === siteImg2Url){
+            img2Url=imageData[j][5] + "=w" + imageData[j][2] + "-h" + imageData[j][3];
           }
           j++;
         }
         tempData[siteData[i][1]] = {
-          wideImage1st: url ? url + size : null,
-          thumbnailImage: thumbUrl ? thumbUrl + thumbSize : null,
-          image1: img1Url ? img1Url + img1Size : null,
-          image2: img2Url ? img2Url + img2Size : null
+          wideImage1st: url ? url : null,
+          thumbnailImage: thumbUrl ? thumbUrl : null,
+          image1: img1Url ? img1Url : null,
+          image2: img2Url ? img2Url : null
         };
       }
     }
