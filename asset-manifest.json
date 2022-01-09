@@ -1,13 +1,12 @@
 {
   "files": {
     "main.css": "/haikanlava/static/css/main.8a25382c.css",
-    "main.js": "/haikanlava/static/js/main.71c8c1af.js",
+    "main.js": "/haikanlava/static/js/main.3e995e63.js",
     "static/js/787.1db34099.chunk.js": "/haikanlava/static/js/787.1db34099.chunk.js",
     "static/media/lava ulkoa1200.png": "/haikanlava/static/media/lava ulkoa1200.5245be7d7c91f1bfa938.png",
     "static/media/ilmakuva1200.jpg": "/haikanlava/static/media/ilmakuva1200.15e7a6869053d55bd861.jpg",
     "static/media/lava auringossa1200.jpg": "/haikanlava/static/media/lava auringossa1200.0cd2b644340af4f753c3.jpg",
     "static/media/haat1200.jpg": "/haikanlava/static/media/haat1200.9503508352edda22845a.jpg",
-    "static/media/ilmakuva1200wt.jpg": "/haikanlava/static/media/ilmakuva1200wt.d7aebbced1e5c7ba36af.jpg",
     "static/media/Lavan pihalla1200.jpg": "/haikanlava/static/media/Lavan pihalla1200.537ffe6bbd02b5a318f6.jpg",
     "static/media/Lavan pihalla1200w.jpg": "/haikanlava/static/media/Lavan pihalla1200w.ec2c4a496daaa07db6c8.jpg",
     "static/media/juhlissa1200.jpg": "/haikanlava/static/media/juhlissa1200.e849905382cc3e55a532.jpg",
@@ -21,11 +20,11 @@
     "static/media/juhlissa320.jpg": "/haikanlava/static/media/juhlissa320.0f1aa6a75e1ae67e7a2e.jpg",
     "index.html": "/haikanlava/index.html",
     "main.8a25382c.css.map": "/haikanlava/static/css/main.8a25382c.css.map",
-    "main.71c8c1af.js.map": "/haikanlava/static/js/main.71c8c1af.js.map",
+    "main.3e995e63.js.map": "/haikanlava/static/js/main.3e995e63.js.map",
     "787.1db34099.chunk.js.map": "/haikanlava/static/js/787.1db34099.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.8a25382c.css",
-    "static/js/main.71c8c1af.js"
+    "static/js/main.3e995e63.js"
   ]
 }
