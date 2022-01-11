@@ -12,7 +12,6 @@ import { withRouter } from 'react-router-dom'
 const PlainClosableLayout = props => {
 
   const data = useStore();
-  const nodeRef = React.useRef(null);
   const pageData = props.name && data[props.name] ? data[props.name] : null;
 
   const wideImage = pageData && pageData.wideImage1st ? pageData.wideImage1st : props.wideImg;
@@ -26,7 +25,7 @@ const PlainClosableLayout = props => {
   }
 
   return (
-    <div className="figureView" ref={nodeRef}>
+    <div className="figureView" >
       <div className="title narrow">
         {props.text}
         <Button handleClick={handleClick} label="X"/>

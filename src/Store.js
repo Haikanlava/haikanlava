@@ -32,6 +32,8 @@ export const StoreProvider = ({ children }) => {
     }
     fetchMyAPI();
     fetchMyAPI2();
+
+
   }, []);
 
   useEffect(() => {

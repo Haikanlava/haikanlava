@@ -10,7 +10,6 @@ import { useStore } from './Store';
 
 const Home = () => {
 
-  const nodeRef = React.useRef(null);
   const data = useStore();
   const calendarImg = data && data.varauskalenteri ? data.varauskalenteri.thumbnailImage : null;
   const galleryImg = data && data.kuvagalleria ? data.kuvagalleria.thumbnailImage : null;
@@ -21,7 +20,7 @@ const Home = () => {
   return (
     <div>
       <Header/>
-      <div ref={nodeRef}>
+      <div>
         <div className="mainStyle">
           <div className="polaroids">
             <Link to="/esittely"><Polaroid name="esittely" text="Esittely" headerProp={presentationImg}/></Link>
