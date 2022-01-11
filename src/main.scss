@@ -14,7 +14,7 @@ $mobile-wrapper-width: 600px;
 //$baseColor: #EE7942;
 //$baseColor: #95846a;
 
-$whiteColor: #f9f8f9;
+$whiteColor: #f6f6fa;
 $baseColor: #2F496E;
 $backgroundColor: #F4EADE;
 $backgroundColor: #F4EADE;
@@ -401,7 +401,7 @@ $primaryColor: #896e69;
   }
 
   .header {
-    background: $whiteColor;
+    background: transparent;
     position: relative;
     z-index:10;
     margin: 0;
@@ -476,7 +476,7 @@ $primaryColor: #896e69;
 
         font-size:36px;
         font-family: 'Open Sans', sans-serif;
-        line-height: 28px;
+        line-height: 32px;
         //padding-top: 7px;
         padding-top: 4px;
         margin-left: -6px;
@@ -488,14 +488,14 @@ $primaryColor: #896e69;
         }
         @include tablet {
           font-size:55px;
-          line-height: 36px;
+          line-height: 42px;
           padding-top: 9px;
           margin-left: -8px;
           width: auto;
         }
         @include desktop {
           font-size:62px;
-          line-height: 54px;
+          line-height: 58px;
           padding-top: 4px;
           margin-left: -9px;
         }
@@ -506,7 +506,7 @@ $primaryColor: #896e69;
       float: right;
       text-align: right;
       color: #95846a;
-      font-weight: normal;
+      font-weight: bold;
       font-style: italic;
       font-size:18px;
       line-height: 10px;

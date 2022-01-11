@@ -15,7 +15,7 @@ const Header = props => {
         <img className="headerImg" src={logoImg}/>
         <div className="headerText">
               <span>
-                <span>HAIKANLAVA</span>
+                <span>HAIKAN LAVA</span>
               </span>
         </div>
       </div>
