@@ -67,7 +67,6 @@ const CalMonth = (props) => {
       {props.children}
     </div>
   )
-
 };
 
 const daysInMonth = (month, year) => new Date(year, month, 0).getDate();

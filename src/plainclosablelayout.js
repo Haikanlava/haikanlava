@@ -4,13 +4,10 @@
 import React from 'react';
 import Button from './button';
 import Jimage from './jimage';
-import siteData from './data';
 import { useStore } from './Store';
 
 import { browserRouter } from 'react-router-dom'
 import { withRouter } from 'react-router-dom'
-
-import {CSSTransition, TransitionGroup} from 'react-transition-group' // ES6
 
 const PlainClosableLayout = props => {
 
@@ -24,49 +21,33 @@ const PlainClosableLayout = props => {
 
   const onBottom = props.onBottom ? true : false;
 
-  function handleClick () {
+  function handleClick() {
     props.history.goBack();
   }
+
   return (
-
-    <TransitionGroup
-      appear={true}
-      enter={true}
-      exit={false}
-    >
-
-    <CSSTransition
-      nodeRef={nodeRef}
-
-      classNames="figureView"
-      timeout={{ exit: siteData.baseAnimDelay, enter: siteData.baseAnimDelay }}>
-      <div className="figureView" ref={nodeRef}>
-        
-        <div className="title narrow">
-          {props.text}
-          <Button handleClick={handleClick} label="X"/>
-        </div>
-
-        <div className="content">
-
-          {wideImage && !onBottom ? (
-            <Jimage className="wideImg" imgSrc={wideImage}/>
-          ) : null}
-          {props.children}
-          {image1 ? (
-            <img className="right" src={image1}/>
-          ) : null}
-
-          {image2 ? (
-            <img className="left" src={image2}/>
-          ) : null}
-          {wideImage && onBottom ? (
-            <Jimage maxWidth={props.maxWidth} className="wideImg" imgSrc={wideImage}/>
-          ) : null}
-        </div>
+    <div className="figureView" ref={nodeRef}>
+      <div className="title narrow">
+        {props.text}
+        <Button handleClick={handleClick} label="X"/>
       </div>
-    </CSSTransition>
-      </TransitionGroup>
+      <div className="content">
+        {wideImage && !onBottom ? (
+          <Jimage className="wideImg" imgSrc={wideImage}/>
+        ) : null}
+        {props.children}
+        {image1 ? (
+          <img className="right" src={image1}/>
+        ) : null}
+
+        {image2 ? (
+          <img className="left" src={image2}/>
+        ) : null}
+        {wideImage && onBottom ? (
+          <Jimage maxWidth={props.maxWidth} className="wideImg" imgSrc={wideImage}/>
+        ) : null}
+      </div>
+    </div>
   );
 };
 

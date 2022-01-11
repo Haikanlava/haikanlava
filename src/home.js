@@ -3,11 +3,9 @@
  */
 import React from 'react';
 import { Link } from 'react-router-dom'
-import {CSSTransition, TransitionGroup} from 'react-transition-group' // ES6
 import Header from './header';
 
 import Polaroid from './polaroid';
-import siteData from './data';
 import { useStore } from './Store';
 
 const Home = () => {
@@ -22,34 +20,20 @@ const Home = () => {
 
   return (
     <div>
-  <Header/>
-
-  <TransitionGroup
-      appear={true}
-      enter={true}
-      exit={false}
-       >
-
-     <CSSTransition
-       timeout={{ exit: siteData.baseAnimDelay, enter: siteData.baseAnimDelay }}
-       classNames="home" nodeRef={nodeRef}>
-       <div ref={nodeRef}>
-
-       <div className="mainStyle" >
-
-         <div className="polaroids">
-           <Link to="/esittely" ><Polaroid name="esittely" text="Esittely" headerProp={presentationImg}/></Link>
-           <Link to="/yhteystiedot" ><Polaroid name="yhteystiedot" text="Sijainti" headerProp={contactImg}/></Link>
-           <Link to="/varauskalenteri" ><Polaroid name="varauskalenteri" text="Katso varaustilanne" headerProp={calendarImg} data={siteData.varauskalenteri}/></Link>
-           <Link to="/kuvagalleria" ><Polaroid name="kuvagalleria" text="Kuvia" headerProp={galleryImg}/></Link>
-           <Link to="/hinnasto" ><Polaroid name="hinnasto" text="Hinnasto" headerProp={priceImg}/></Link>
-         </div>
-       </div>
-       </div>
-     </CSSTransition>
-
-    </TransitionGroup>
+      <Header/>
+      <div ref={nodeRef}>
+        <div className="mainStyle">
+          <div className="polaroids">
+            <Link to="/esittely"><Polaroid name="esittely" text="Esittely" headerProp={presentationImg}/></Link>
+            <Link to="/yhteystiedot"><Polaroid name="yhteystiedot" text="Sijainti" headerProp={contactImg}/></Link>
+            <Link to="/varauskalenteri"><Polaroid name="varauskalenteri" text="Katso varaustilanne"
+                                                  headerProp={calendarImg} /></Link>
+            <Link to="/kuvagalleria"><Polaroid name="kuvagalleria" text="Kuvia" headerProp={galleryImg}/></Link>
+            <Link to="/hinnasto"><Polaroid name="hinnasto" text="Hinnasto" headerProp={priceImg}/></Link>
+          </div>
+        </div>
       </div>
+    </div>
   );
 };
 
