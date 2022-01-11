@@ -1,7 +1,7 @@
 /**
  * Created by jannevainio on 13/01/17.
  */
-§import React from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom'
 import {CSSTransition, TransitionGroup} from 'react-transition-group' // ES6
 import Header from './header';
