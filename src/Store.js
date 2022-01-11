@@ -82,7 +82,6 @@ export const StoreProvider = ({ children }) => {
 
   }, [siteData, imageData]);
 
-
   return (
     <Store.Provider value={pageData}>{children}</Store.Provider>
   );

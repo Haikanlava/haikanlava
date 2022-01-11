@@ -2,7 +2,6 @@
  * Created by jannevainio on 22/01/17.
  */
 import React from 'react';
-import siteData from './data';
 
 class Jimage extends React.Component {
 

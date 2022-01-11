@@ -7,7 +7,7 @@ import { useStore } from './Store';
 
 const Header = props => {
   const { siteData } = useStore();
-  const headerText = siteData && siteData.length == 0 ? siteData[0][1] : "";
+  const headerText = siteData && siteData.length > 0 ? siteData[0][1] : "";
 
   return (
     <div className="header">

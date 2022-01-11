@@ -1,11 +1,10 @@
 /**
  * Created by jannevainio on 13/01/17.
  */
-import React, { useEffect } from 'react';
+§import React from 'react';
 import { Link } from 'react-router-dom'
 import {CSSTransition, TransitionGroup} from 'react-transition-group' // ES6
 import Header from './header';
-import { StoreProvider } from './Store';
 
 import Polaroid from './polaroid';
 import siteData from './data';
