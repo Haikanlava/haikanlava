@@ -26,7 +26,7 @@ class Jimage extends React.Component {
     };
     imageStyle.width = this.props.containerWidth + 'px';
     if(this.props.maxWidth){
-      imageStyle.width = this.props.maxWidth + 'px';
+      imageStyle.maxWidth = this.props.maxWidth + 'px';
 
     }
     return (
