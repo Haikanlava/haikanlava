@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/haikanlava/static/css/main.f956eec4.css",
-    "main.js": "/haikanlava/static/js/main.336e12ef.js",
-    "static/js/787.1db34099.chunk.js": "/haikanlava/static/js/787.1db34099.chunk.js",
-    "index.html": "/haikanlava/index.html",
-    "main.f956eec4.css.map": "/haikanlava/static/css/main.f956eec4.css.map",
-    "main.336e12ef.js.map": "/haikanlava/static/js/main.336e12ef.js.map",
-    "787.1db34099.chunk.js.map": "/haikanlava/static/js/787.1db34099.chunk.js.map"
+    "main.css": "/static/css/main.f956eec4.css",
+    "main.js": "/static/js/main.76859f65.js",
+    "static/js/787.1db34099.chunk.js": "/static/js/787.1db34099.chunk.js",
+    "index.html": "/index.html",
+    "main.f956eec4.css.map": "/static/css/main.f956eec4.css.map",
+    "main.76859f65.js.map": "/static/js/main.76859f65.js.map",
+    "787.1db34099.chunk.js.map": "/static/js/787.1db34099.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.f956eec4.css",
-    "static/js/main.336e12ef.js"
+    "static/js/main.76859f65.js"
   ]
 }
