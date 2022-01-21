@@ -17,23 +17,15 @@ const Yhteystiedot = (props) => {
 
   let googleMap = {
     width: mapWidth + 'px',
-    height: 'auto',
-    float: 'none',
-    padding: '0',
-    marginTop: '25px',
-    marginLeft: 'auto',
-    marginRight: 'auto',
-    marginBottom: '10px'
+    marginTop: '25px auto 10px auto'
   };
 
   let gStyle = {
     margin: '0 auto',
-    padding: '0',
     width: mapWidth + 'px',
     height: '300px',
     frameborder: '0',
-    border: '1px solid #cccccc',
-    backgroundColor: '#eeeeee',
+    border: '2px solid #cccccc',
     verticalAlign: 'top'
   };
 
