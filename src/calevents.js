@@ -150,7 +150,9 @@ const CalEvents = (props) => {
           day0 = m!= month0 - startMonth ? 1 : day0;
         }
         for(let d=day0; d<=day1;d++) {
-          calendar[y].months[m].days[calendar[y].months[m].firstWeekDay + d - 1].reserved = true;
+          if(calendar[y].months[m]  ){
+            calendar[y].months[m].days[calendar[y].months[m].firstWeekDay + d - 1].reserved = true;
+          }
         }
       }
     }
