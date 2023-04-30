@@ -16,7 +16,6 @@ const RenderIntros = ({sheetName, numbering=false, align="left"}) => {
     textAlign: align
   };
 
-  console.log(calData);
   return (
     <div>
       {calData.map((item, i) =>
