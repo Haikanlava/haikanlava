@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/https%20%20://haikanlava.fi/static/css/main.f956eec4.css",
-    "main.js": "/https%20%20://haikanlava.fi/static/js/main.92e9e68e.js",
-    "static/js/787.1db34099.chunk.js": "/https%20%20://haikanlava.fi/static/js/787.1db34099.chunk.js",
-    "index.html": "/https%20%20://haikanlava.fi/index.html",
-    "main.f956eec4.css.map": "/https%20%20://haikanlava.fi/static/css/main.f956eec4.css.map",
-    "main.92e9e68e.js.map": "/https%20%20://haikanlava.fi/static/js/main.92e9e68e.js.map",
-    "787.1db34099.chunk.js.map": "/https%20%20://haikanlava.fi/static/js/787.1db34099.chunk.js.map"
+    "main.css": "/static/css/main.f956eec4.css",
+    "main.js": "/static/js/main.f1fdd235.js",
+    "static/js/787.1db34099.chunk.js": "/static/js/787.1db34099.chunk.js",
+    "index.html": "/index.html",
+    "main.f956eec4.css.map": "/static/css/main.f956eec4.css.map",
+    "main.f1fdd235.js.map": "/static/js/main.f1fdd235.js.map",
+    "787.1db34099.chunk.js.map": "/static/js/787.1db34099.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.f956eec4.css",
-    "static/js/main.92e9e68e.js"
+    "static/js/main.f1fdd235.js"
   ]
 }
