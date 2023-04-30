@@ -19,7 +19,8 @@ const RenderIntros = ({sheetName, numbering=false, align="left"}) => {
   return (
     <div>
       {calData.map((item, i) =>
-        <p style={style} key={i} dangerouslySetInnerHTML={{__html: item}}></p>
+ 
+        <p style={style} key={i} dangerouslySetInnerHTML={{__html: item}} />
       )}
     </div>
   );
