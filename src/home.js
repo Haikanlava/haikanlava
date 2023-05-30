@@ -16,6 +16,7 @@ const Home = () => {
   const presentationImg = data && data.esittely ? data.esittely.thumbnailImage : null;
   const contactImg = data && data.yhteystiedot ? data.yhteystiedot.thumbnailImage : null;
   const priceImg = data && data.hinnasto ? data.hinnasto.thumbnailImage : null;
+  const equipmentImg = data && data.kalusto ? data.kalusto.thumbnailImage : null;
 
   return (
     <div>
@@ -29,7 +30,7 @@ const Home = () => {
                                                   headerProp={calendarImg} /></Link>
             <Link to="/kuvagalleria"><Polaroid name="kuvagalleria" text="Kuvia" headerProp={galleryImg}/></Link>
             <Link to="/hinnasto"><Polaroid name="hinnasto" text="Hinnasto" headerProp={priceImg}/></Link>
-            <Link to="/kalusto"><Polaroid name="kalusto" text="Kalustoluettelo" headerProp={presentationImg}/></Link>
+            <Link to="/kalusto"><Polaroid name="kalusto" text="Kalustoluettelo" headerProp={equipmentImg}/></Link>
 
           </div>
         </div>
