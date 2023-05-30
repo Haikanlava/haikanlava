@@ -29,6 +29,8 @@ const Home = () => {
                                                   headerProp={calendarImg} /></Link>
             <Link to="/kuvagalleria"><Polaroid name="kuvagalleria" text="Kuvia" headerProp={galleryImg}/></Link>
             <Link to="/hinnasto"><Polaroid name="hinnasto" text="Hinnasto" headerProp={priceImg}/></Link>
+            <Link to="/kalusto"><Polaroid name="kalusto" text="Kalustoluettelo" headerProp={presentationImg}/></Link>
+
           </div>
         </div>
       </div>

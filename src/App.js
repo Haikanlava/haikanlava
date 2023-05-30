@@ -5,6 +5,7 @@ import Home from './home';
 import Varauskalenteri from './varauskalenteri';
 import Yhteystiedot from './yhteystiedot';
 import Esittely from './esittely';
+import Kalusto from './kalusto';
 import Kuvagalleria from './kuvagalleria';
 import Hinnasto from './hinnasto';
 import Vuokraehdot from './ehdot';
@@ -19,6 +20,7 @@ function App() {
           <Route path="/varauskalenteri" component={Varauskalenteri}/>
           <Route path="/yhteystiedot" component={Yhteystiedot} />
           <Route path="/esittely" component={Esittely} />
+          <Route path="/kalusto" component={Kalusto} />
           <Route path="/hinnasto" component={Hinnasto} />
           <Route path="/ehdot" component={Vuokraehdot} />
           <Route path="/kuvagalleria" component={Kuvagalleria} />
