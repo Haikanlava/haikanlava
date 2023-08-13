@@ -146,8 +146,8 @@ const CalEvents = (props) => {
       for(let m=month0 - startMonth; m<=month1 - startMonth;m++) {
         if(month0 !== month1){
           const numberOfDays = daysInMonth(m, y);
-          day1 = m!= month1 - startMonth ? numberOfDays : day1;
-          day0 = m!= month0 - startMonth ? 1 : day0;
+          day1 = m!= (month1 - startMonth) ? numberOfDays : calData[i][1].day;
+          day0 = m!= (month0 - startMonth) ? 1 : calData[i][0].day;
         }
         for(let d=day0; d<=day1;d++) {
           if(calendar[y].months[m]  ){
