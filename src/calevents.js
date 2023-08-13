@@ -158,15 +158,19 @@ const CalEvents = (props) => {
     }
   }
 
+  const firstDate = new Date();
+  const currentMonth = firstDate.getMonth()+1;
+  const currentYear = firstDate.getFullYear();
+
   return (
     <div className="jCalendar">
     {
       calendar.map(d =>
         <CalYear key={d.year} year={d.year}>
           {d.months.map( m =>
-          <CalMonth key={d.year+"_"+m.month} month={m.month}>
+            (currentYear>d.year || currentMonth<= m.month) ? <CalMonth key={d.year+"_"+m.month} month={m.month}>
             <CalDays month={m.month} days={m.days}/>
-          </CalMonth>)}
+          </CalMonth> : null)}
         </CalYear>)
     }
     </div>
