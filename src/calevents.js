@@ -168,7 +168,7 @@ const CalEvents = (props) => {
       calendar.map(d =>
         <CalYear key={d.year} year={d.year}>
           {d.months.map( m =>
-            (currentYear>d.year || currentMonth<= m.month) ? <CalMonth key={d.year+"_"+m.month} month={m.month}>
+            (currentYear<d.year || currentMonth<= m.month) ? <CalMonth key={d.year+"_"+m.month} month={m.month}>
             <CalDays month={m.month} days={m.days}/>
           </CalMonth> : null)}
         </CalYear>)
