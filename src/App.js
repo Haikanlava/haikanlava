@@ -9,7 +9,7 @@ import Kalusto from './kalusto';
 import Kuvagalleria from './kuvagalleria';
 import Hinnasto from './hinnasto';
 import Vuokraehdot from './ehdot';
-
+// test
 function App() {
   return (
     <div className="haikanLava">
