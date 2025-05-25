@@ -34,7 +34,7 @@ class Jimage extends React.Component {
         <div
           className="jIMage"
           style={imageStyle}>
-          <img onLoad={this.handleLoad} src={this.props.imgSrc} />
+          <img onLoad={this.handleLoad} src={this.props.imgSrc} referrerpolicy="no-referrer"/>
         </div>
       </div>
     );
